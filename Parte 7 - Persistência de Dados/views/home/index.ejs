@@ -1,0 +1,17 @@
+<% include ../header %>
+    <header class="row-fluid text-center">
+        <h1>SpeechN</h1>
+        <h4>Bem Vindo!</h4>
+    </header>
+    <section class="row-fluid text-center">
+        <form action="/logar" method="post">
+            <input type="text" name="usuario[nome]" placeholder="Seu nome">
+            <br />
+            <input type="email" name="usuario[email]" placeholder="Seu email">
+            <br />
+            <button class="btn btn-info"> Entrar </button>
+        </form>
+    </section>
+    <% include ../footer %>
+</body>
+</html>

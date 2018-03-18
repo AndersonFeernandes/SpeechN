@@ -1,0 +1,40 @@
+<% include ../header %>
+<header class="row-fluid text-center">
+    <h2>SpeechN - Agenda de Contatos</h2>
+</header>
+<!--    <p>Bem Vindo <%- usuario.nome %></p> -->
+    <section class="row-fluid">
+            <section class="span12">
+    <form action="/contato" method="POST"  class="well form-inline">
+        <input type="text" name="contato[nome]" placeholder="Nome">
+        <input type="email" name="contato[email]" placeholder="E-mail">
+        <button class="btn btn-primary">Cadastrar</button>
+    </form>
+    <table class="table well">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% contatos.forEach(function(contato, index) {%>
+                <tr>
+                    <td> <%- contato.nome %> </td>
+                    <td> <%- contato.email %> </td>
+                    <td><span id="notify_<%- contato.email %>" class="label">Offline</span></td>                    </td>
+                    <td> 
+                        <a href="/contato/<%- index %>">Detalhes</a> 
+                        <a href="/chat" id="chat_<%- contato.email %>">Conversar</a>
+                    </td>
+                    
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    </section>
+</section>
+<% include ../logout %>
+<% include notify_script %>
+<% include ../footer %>

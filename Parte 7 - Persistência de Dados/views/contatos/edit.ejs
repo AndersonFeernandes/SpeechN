@@ -1,0 +1,17 @@
+<% include ../header %>
+<header class="row-fluid text-center">
+    <h2> SpeechN - Editar Contato </h2>
+</header>
+<section class="row-fluid text-center">
+    <form action="/contato/<%- contato._id %>" method="POST" class="well form-inline">
+        <input type="hidden" name="_method" value="put">
+        <label>Nome: </label>
+        <input type="text" name="contato[nome]" value="<%- contato.nome %>" class="input-medium">
+        <label>E-mail: </label>
+        <input type="email" name="contato[email]" value="<%- contato.email %>" class="input-medium">
+        <button class="btn btn-primary">Atualizar</button>
+    </form>
+    <a href="javascript:history.back()">Voltar</a>
+</section>
+<% include ../logout %>
+<% include ../footer %>

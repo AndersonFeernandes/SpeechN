@@ -1,4 +1,4 @@
-# SpeechN (Speech Noded)
+# SpeechN (Speech Node)
 ============================
 ## Sobre
 Este é um projeto é uma replica do livro "Aplicações web real-time com Node.js" (https://casadocodigo.refersion.com/l/630.1389) da editora Casa do Código (http://www.casadocodigo.com.br). Contedo uma atualizações de depedencias e adaptações.
